@@ -1,0 +1,20 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-lastest
+    steps:
+      - uses: actions/checkout@v2 #  checkout 到 main 分支
+      - uses: actions/setup-python@v2 # 安装 Python3 和相关环境
+        with:
+          python-version: 3.10.11
+      - run: pip install mkdocs-material # 使用 pip 安装 mkdocs-material 主题
+      - run: mkdocs gh-deploy --force # 使用 mkdocs 部署到 gh-pages 分支
