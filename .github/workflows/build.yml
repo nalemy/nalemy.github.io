@@ -10,7 +10,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2 #  checkout 到 main 分支
       - uses: actions/setup-python@v2 # 安装 Python3 和相关环境
