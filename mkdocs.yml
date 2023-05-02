@@ -9,7 +9,7 @@ theme:
     primary: black
     accent: teal
   features: 
-    - navigation.instant #- header.autohide  # 自动隐藏
+    #- navigation.instant #- header.autohide  # 自动隐藏
     #- announce.dismiss # 呈现可标记为由用户读取的临时公告，可以包含一个用于取消当前公告的按钮
     - navigation.tracking # 地址栏中的 URL 将自动更新为在目录中突出显示的活动锚点
     - navigation.tabs # 顶级部分将呈现在上面视口标题下方的菜单层中，但在移动设备上保持原样
@@ -101,3 +101,5 @@ extra_css:
 
 nav:
   - 首页: index.md
+  - 图论:
+    - 差分约束: graph/diff-constraints.md
