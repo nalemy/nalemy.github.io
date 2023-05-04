@@ -103,3 +103,5 @@ nav:
   - 首页: index.md
   - 图论:
     - 差分约束: graph/diff-constraints.md
+  - 数学:
+    - 博弈论: math/game-theory.md
