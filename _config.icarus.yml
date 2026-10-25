@@ -3,15 +3,16 @@ version: 5.1.0
 # Icarus theme variant, can be "default" or "cyberpunk"
 variant: default
 # Color scheme of the default variant, can be "light", "dark" or "auto" (light or dark following the setting of the browser or system of each visitor). Can be set per page in the front-matter or in layout configuration files such as _config.post.yml. Ignored by the cyberpunk variant, which is always dark
-appearance: light
+appearance: auto
 # Path or URL to the website's logo
-logo: /img/logo.svg
+logo:
+    text: Mouse King
 # Path or URL to the logo shown instead of the logo image when the default variant looks dark (see appearance), and always by the cyberpunk variant. Without it, the theme's own logo switches to /img/logo-dark.svg and other logos stay the same
 logo_dark: 
 # Page metadata configurations
 head:
     # URL or path to the website's icon
-    favicon: /img/favicon.svg
+    favicon: /img/favicon.png
     # Web application manifests configuration
     # https://developer.mozilla.org/en-US/docs/Web/Manifest
     manifest:
@@ -118,9 +119,9 @@ navbar:
         About: /about
     # Links to be shown on the right of the navigation bar
     links:
-        Download on GitHub:
+        GitHub Repo:
             icon: fab fa-github
-            url: https://github.com/ppoffice/hexo-theme-icarus
+            url: https://github.com/nalemy/nalemy.github.io
 # Page footer configurations
 footer:
     # Copyright text
@@ -155,7 +156,7 @@ article:
     # Whether to show estimated article reading time
     readtime: true
     # Whether to show updated time. For "auto", shows article update time only when page.updated is set and it is different from page.date
-    update_time: true
+    update_time: auto
     # Notice shown at the top of posts that were last updated (or, without an update time, posted) a long time ago. Readers' browsers compute the age, so that it stays right on a static site; the notice can be turned off in the front-matter of a post with "outdated_notice: false"
     outdated_notice:
         # Whether to show the notice
@@ -181,51 +182,51 @@ search:
     index_pages: true
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
-comment:
-    type: disqus
+# comment:
+    # type: disqus
     # Disqus shortname
-    shortname: ''
+    # shortname: ''
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
-donates:
-    # "Afdian.net" donate button configurations
-    -
-        type: afdian
-        # URL to the "Afdian.net" personal page
-        url: ''
-    # Alipay donate button configurations
-    -
-        type: alipay
-        # Alipay qrcode image URL
-        qrcode: ''
-    # "Buy me a coffee" donate button configurations
-    -
-        type: buymeacoffee
-        # URL to the "Buy me a coffee" page
-        url: ''
-    # Patreon donate button configurations
-    -
-        type: patreon
-        # URL to the Patreon page
-        url: ''
-    # Paypal donate button configurations
-    -
-        type: paypal
-        # Paypal business ID or email address
-        business: ''
-        # Currency code
-        currency_code: USD
-    # Wechat donate button configurations
-    -
-        type: wechat
-        # Wechat qrcode image URL
-        qrcode: ''
+# donates:
+#     # "Afdian.net" donate button configurations
+#     -
+#         type: afdian
+#         # URL to the "Afdian.net" personal page
+#         url: ''
+#     # Alipay donate button configurations
+#     -
+#         type: alipay
+#         # Alipay qrcode image URL
+#         qrcode: ''
+#     # "Buy me a coffee" donate button configurations
+#     -
+#         type: buymeacoffee
+#         # URL to the "Buy me a coffee" page
+#         url: ''
+#     # Patreon donate button configurations
+#     -
+#         type: patreon
+#         # URL to the Patreon page
+#         url: ''
+#     # Paypal donate button configurations
+#     -
+#         type: paypal
+#         # Paypal business ID or email address
+#         business: ''
+#         # Currency code
+#         currency_code: USD
+#     # Wechat donate button configurations
+#     -
+#         type: wechat
+#         # Wechat qrcode image URL
+#         qrcode: ''
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
-share:
-    type: sharethis
-    # URL to the ShareThis share plugin script
-    install_url: ''
+# share:
+#     type: sharethis
+#     # URL to the ShareThis share plugin script
+#     install_url: ''
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
@@ -246,36 +247,45 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: Nalemy
+        author: Mouse King
         # Author title
-        author_title: Web Developer
+        author_title: Undergrad.
         # Author's current location
-        location: China
+        location: Tsinghua University, Beijing
         # URL or path to the avatar image
-        avatar: /img/avatar.png
+        avatar: /img/avatar.jpg
         # Whether show the rounded avatar image
         avatar_rounded: false
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: https://github.com/ppoffice
+        # follow_link: https://github.com/ppoffice
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
                 icon: fab fa-github
-                url: https://github.com/ppoffice
-            Facebook:
-                icon: fab fa-facebook
-                url: https://facebook.com
-            Twitter:
-                icon: fab fa-twitter
-                url: https://twitter.com
-            Dribbble:
-                icon: fab fa-dribbble
-                url: https://dribbble.com
-            RSS:
-                icon: fas fa-rss
-                url: /
+                url: https://github.com/nalemy
+            Email:
+                icon: fas fa-envelope
+                url: mailto:mouse-king@outlook.com
+            知乎:
+                icon: fab fa-zhihu
+                url: https://www.zhihu.com/people/nalemy
+            B 站:
+                icon: fab fa-bilibili
+                url: https://space.bilibili.com/3546862254557360
+            # Facebook:
+            #     icon: fab fa-facebook
+            #     url: https://facebook.com
+            # Twitter:
+            #     icon: fab fa-twitter
+            #     url: https://twitter.com
+            # Dribbble:
+            #     icon: fab fa-dribbble
+            #     url: https://dribbble.com
+            # RSS:
+            #     icon: fas fa-rss
+            #     url: /
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -288,14 +298,14 @@ widgets:
         # Maximum level of headings to show (1-6)
         depth: 3
     # Recommendation links widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: links
-        # Names and URLs of the sites
-        links:
-            Hexo: https://hexo.io
-            Bulma: https://bulma.io
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: links
+    #     Names and URLs of the sites
+    #     links:
+    #         Hexo: https://hexo.io
+    #         Bulma: https://bulma.io
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -347,25 +357,17 @@ widgets:
         # Whether to show tags count, i.e. number of posts in the tag.
         show_count: true
     # Google AdSense unit configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: adsense
-        # AdSense client ID
-        client_id: ''
-        # AdSense AD unit ID
-        slot_id: ''
     # Follow.it email subscription widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: followit
-        # Hint text under the email input
-        description: 
-        # Subscription form action URL
-        action_url: ''
-        # Feed claiming verification code
-        verification_code: ''
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: followit
+    #     # Hint text under the email input
+    #     description: 
+    #     # Subscription form action URL
+    #     action_url: ''
+    #     # Feed claiming verification code
+    #     verification_code: ''
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
@@ -375,54 +377,53 @@ plugins:
     back_to_top: true
     # Baidu Analytics plugin settings
     # https://tongji.baidu.com
-    baidu_analytics:
-        # Baidu Analytics tracking ID
-        tracking_id: 
+    # baidu_analytics:
+    #     # Baidu Analytics tracking ID
+    #     tracking_id: 
     # Bing Webmaster Tools plugin settings
     # https://www.bing.com/toolbox/webmaster/
-    bing_webmaster:
-        # Bing Webmaster Tools tracking ID in the <meta> tag
-        tracking_id: 
+    # bing_webmaster:
+    #     # Bing Webmaster Tools tracking ID in the <meta> tag
+    #     tracking_id: 
     # BuSuanZi site/page view counter
     # https://busuanzi.ibruce.info
-    busuanzi: false
+    busuanzi: true
     # CNZZ statistics
     # https://www.umeng.com/web
-    cnzz:
-        # CNZZ tracker id
-        id: 
-        # CNZZ website id
-        web_id: 
+    # cnzz:
+    #     # CNZZ tracker id
+    #     id: 
+    #     # CNZZ website id
+    #     web_id: 
     # Alerting users about the use of cookies
     # https://www.osano.com/cookieconsent/
-    cookie_consent: false
     # Enable the lightGallery and Justified Gallery plugins
     gallery: true
     # Google Analytics plugin settings
     # https://analytics.google.com
-    google_analytics:
-        # Google Analytics tracking ID
-        tracking_id: 
+    # google_analytics:
+    #     # Google Analytics tracking ID
+    #     tracking_id: 
     # Hotjar user feedback plugin
     # https://www.hotjar.com/
-    hotjar:
-        # Hotjar site id
-        site_id: 
+    # hotjar:
+    #     # Hotjar site id
+    #     site_id: 
     # Enable the KaTeX math typesetting support
     # https://katex.org/
-    katex: false
+    katex: true
     # Enable the MathJax math typesetting support
     # https://www.mathjax.org/
     mathjax: false
     # Matomo analytics plugin settings
     # https://matomo.org
-    matomo:
-        # URL of your Matomo server, e.g., https://matomo.example.com/ or https://example.matomo.cloud/
-        url: 
-        # Matomo site ID
-        site_id: 
-        # Track visitors without setting cookies
-        disable_cookies: false
+    # matomo:
+    #     # URL of your Matomo server, e.g., https://matomo.example.com/ or https://example.matomo.cloud/
+    #     url: 
+    #     # Matomo site ID
+    #     site_id: 
+    #     # Track visitors without setting cookies
+    #     disable_cookies: false
     # Enable the Outdated Browser plugin
     # http://outdatedbrowser.com/
     outdated_browser: false
@@ -434,25 +435,25 @@ plugins:
     progressbar: true
     # Statcounter statistics
     # https://statcounter.com/
-    statcounter:
-        # Statcounter project id
-        project: 
-        # Statcounter project security code
-        security: 
+    # statcounter:
+    #     # Statcounter project id
+    #     project: 
+    #     # Statcounter project security code
+    #     security: 
     # Twitter conversion tracking plugin settings
     # https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html
-    twitter_conversion_tracking:
-        # Twitter Pixel ID
-        pixel_id: 
+    # twitter_conversion_tracking:
+    #     # Twitter Pixel ID
+    #     pixel_id: 
     # Umami analytics plugin settings
     # https://umami.is/docs/tracker-configuration
-    umami:
-        # Umami website ID
-        website_id: 
-        # URL of the Umami tracker script. Change it to the one on your server if you host Umami yourself
-        script_url: https://cloud.umami.is/script.js
-        # Only track the visits on these comma-separated domains
-        domains: 
+    # umami:
+    #     # Umami website ID
+    #     website_id: 
+    #     # URL of the Umami tracker script. Change it to the one on your server if you host Umami yourself
+    #     script_url: https://cloud.umami.is/script.js
+    #     # Only track the visits on these comma-separated domains
+    #     domains: 
     # Waline page view counter, true to use the server of the Waline comments. Do not also enable the pageview option of the Waline comments, which would count the views twice
     # https://waline.js.org/en/guide/features/pageview.html
     waline_pageview: false

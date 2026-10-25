@@ -1,0 +1,19 @@
+/* 侧栏头像:圆角矩形 */
+img.avatar {
+    border-radius: 12px;
+}
+
+/* 如果开启了 avatar_rounded(正圆),保持圆形不变 */
+img.avatar.is-rounded {
+    border-radius: 50%;
+}
+
+/* 文章正文图片:限制宽度、居中、圆角 */
+.article .content img {
+    display: block;
+    max-width: 80%;
+    max-height: 480px;
+    margin: 1em auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
