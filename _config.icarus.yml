@@ -6,7 +6,7 @@ variant: default
 appearance: auto
 # Path or URL to the website's logo
 logo:
-    text: Mouse King
+    text: 老鼠窝
 # Path or URL to the logo shown instead of the logo image when the default variant looks dark (see appearance), and always by the cyberpunk variant. Without it, the theme's own logo switches to /img/logo-dark.svg and other logos stay the same
 logo_dark: 
 # Page metadata configurations
