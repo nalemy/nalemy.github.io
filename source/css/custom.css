@@ -17,3 +17,97 @@ img.avatar.is-rounded {
     border-radius: 8px;
     object-fit: contain;
 }
+
+/* Artalk:元信息行阅读量靠右 */
+#ak-views {
+    margin-left: auto;
+}
+
+/* Artalk:文章底部挂载区与正文留出间距 */
+#ak-widget {
+    margin-top: 2.5em;
+}
+
+/* 文章元信息行撑满卡片宽度,让靠右的元素真正贴右边 */
+.article-meta.level {
+    width: 100%;
+}
+
+
+/* Artalk:文末"浏览量 + 点赞"操作条 */
+#ak-widget {
+    margin-top: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.1em;
+    color: #363636;
+    font-size: .95rem;
+}
+.ak-views i {
+    margin-right: .35em;
+}
+.ak-sep {
+    width: 1px;
+    height: 1.1em;
+    background: #d0d0d0;
+}
+.ak-btn {
+    padding: .35em .9em;
+    border: 1px solid #c9c9c9;
+    border-radius: 999px;
+    background: transparent;
+    cursor: pointer;
+    font-size: .95rem;
+    color: #363636;
+    transition: all .15s ease;
+}
+.ak-btn i {
+    margin-right: .4em;
+}
+.ak-btn:hover {
+    border-color: #e8556d;
+    color: #e8556d;
+    transform: translateY(-1px);
+}
+.ak-btn.is-active {
+    border-color: #e8556d;
+    color: #e8556d;
+    background: rgba(232,85,109,.09);
+}
+
+/* 深色模式:appearance=dark 或 auto+系统深色,主题用 html[data-appearance] 切换 */
+[data-appearance="dark"] #ak-widget,
+[data-appearance="dark"] .ak-btn {
+    color: #d4d6db;
+}
+[data-appearance="dark"] .ak-sep {
+    background: #464952;
+}
+[data-appearance="dark"] .ak-btn:hover {
+    border-color: #ff7b92;
+    color: #ff7b92;
+}
+[data-appearance="dark"] .ak-btn.is-active {
+    border-color: #ff7b92;
+    color: #ff7b92;
+    background: rgba(255,123,146,.12);
+}
+@media (prefers-color-scheme: dark) {
+    [data-appearance="auto"] #ak-widget,
+    [data-appearance="auto"] .ak-btn {
+        color: #d4d6db;
+    }
+    [data-appearance="auto"] .ak-sep {
+        background: #464952;
+    }
+    [data-appearance="auto"] .ak-btn:hover {
+        border-color: #ff7b92;
+        color: #ff7b92;
+    }
+    [data-appearance="auto"] .ak-btn.is-active {
+        border-color: #ff7b92;
+        color: #ff7b92;
+        background: rgba(255,123,146,.12);
+    }
+}
